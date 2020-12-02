@@ -1,6 +1,6 @@
 import pandas as pd
-import sklearn.model_selection as skl
 import random
+from sklearn.model_selection import train_test_split
 import time
 
 def main():
@@ -64,7 +64,7 @@ def loadData(dataFile):
     df = pd.DataFrame(data)
     
 
-    trainData,testData,trainClass,testClass = skl.train_test_split(df,df[561],train_size=0.7,test_size=0.3)
+    trainData,testData,trainClass,testClass = train_test_split(df,df[561],train_size=0.7,test_size=0.3)
     
     return trainData
 
